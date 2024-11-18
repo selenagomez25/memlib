@@ -13,4 +13,3 @@ memlib is a cross-platform memory manipulation library written in golang. provid
 ## Installation
 ```bash
 go get github.com/selenagomez25/memlib/pkg/memlib
-```s
