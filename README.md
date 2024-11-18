@@ -11,13 +11,6 @@ memlib is a cross-platform memory manipulation library written in golang. provid
 - **Module Listing**: List loaded modules within the target process.
 
 ## Installation
-
-To use memlib, you need to have Go installed on your machine. You can install it from the [official Go website](https://golang.org/dl/).
-
-### Get the Library
-
-To get the library, run:
-
 ```bash
 go get github.com/selenagomez25/memlib/pkg/memlib
-```
+```s
