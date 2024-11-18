@@ -1,30 +1,23 @@
 # memlib
 
-memlib is a cross-platform memory hacking library written in Go. It provides an abstraction layer for dealing with raw memory buffers, especially when dealing with process memory.
+memlib is a cross-platform memory manipulation library written in golang. provides an abstraction layer for dealing with raw memory buffers, specifically designed for reading from and writing to the memory of other processes. this library is useful for game hacking, debugging, and other low-level memory operations.
 
 ## Features
 
-- Cross-platform support
-- Memory reading and writing
-- Memory protection
-- Memory allocation
-- Module listing
-- Overlay rendering (to be implemented)
+- **Process Memory Reading**: Read various data types (e.g., uint8, uint32, float32) from the memory of a specified process.
+- **Process Memory Writing**: Write various data types back to the memory of a specified process.
+- **Memory Allocation**: Allocate and free memory within the target process.
+- **Memory Protection**: Change the protection level of a specific memory region.
+- **Module Listing**: List loaded modules within the target process.
 
-## Usage
+## Installation
 
-```go
-import "github.com/selenagomez25/memlib/pkg/memlib"
+To use memlib, you need to have Go installed on your machine. You can install it from the [official Go website](https://golang.org/dl/).
 
-func main() {
-    process := memlib.NewProcess(1234) // Replace with actual PID
-    
-    address := uintptr(0x12345678)
-    value, err := process.ReadUint32(address)
-    if err != nil {
-        log.Fatal(err)
-    }
-    
-    fmt.Printf("Value at 0x%x: %d\n", address, value)
-}
+### Get the Library
+
+To get the library, run:
+
+```bash
+go get github.com/selenagomez25/memlib/pkg/memlib
 ```
